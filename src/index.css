@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url('/1.jpg');
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background-color: grey;
+}
+.bar {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.hyper {
+  color: white;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.hyper:visited {
+    color: rgb(201, 200, 199);
+}
+
+.hyper:hover {
+  color: #CD5D67;
+  transition: .3s;
+  text-shadow: .1px .1px .3px;
+}
+
+.hyper:active {
+  background: #968772;
+  transition: .1s;
+}
+
+.drop_down {
+    margin: 0px;
+    list-style-type: none;
+    text-align: center;
+    background-color: lightgrey;
+    padding: 0px;
+}
+.drop_down_title {
+    padding: 10px 10px 10px 10px;
+    margin: 0px;
+    text-align: center;
+}
+.menu {
+    border-radius: 10px;
+    background-color: grey;
+    border: 1px solid black;
+    width: 100px;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+.list {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.list:hover {
+    background-color: rgba(90, 93, 90, 0.56);
+}
+h1 {
+    color: white;
+}
+
+p {
+    margin: 0px;
+    color: white;
+}
+.projects {
+
+    margin: 10px;
+    border: 5px solid rgb(111, 111, 111);
+    box-shadow: 10px 10px 10px black;
+    width: 40%;
+    height: 320px;
+}
+.container {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+#star {
+    display: flex;
+    justify-content: center;
+}
+span {
+
+    color: yellow;
+
+}
+h3 {
+    color: white;
+}
+h1 {
+    color: white;
+}
+#contact {
+    margin: 15px;
+    box-shadow: 5px 5px 5px black;
+}
+
+button {
+    margin: 10px;
+}
