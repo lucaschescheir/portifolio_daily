@@ -1,46 +1,49 @@
 import React, { Component } from 'react';
-import StarBar from './starbar'
+import StarBar from './starbar';
+import { Switch, Route, Link, withRouter } from 'react-router-dom';
+import Project from './project';
+import Data from './data';
 
 class Projects extends Component {
-    handleClick(url){
-        window.location.href = url;
+    constructor(props){
+        super( props )
+        this.state={
+items: Data,
+        }
     }
-
+/*I think i could of mapped over the Data and just had one template 4 times but I ran out of time....*/
     render(){
+console.log(Data[0].id)
         return(
             <section>
                 <div className="container">
                     <div className="projects">
-                        <h2>iTunes Search Page</h2>
-                        <img src="/placeholder4.png" height="100" width="100" alt="image of project" />
-                        <h3>Description:</h3><p>a site for searching your favorite music</p>
-                        <button onClick={() =>this.handleClick("https://github.com/lucaschescheir/Itunes-music-search-project")}>Check it out on GitHub!</button>
+                        <h2><Link to={"/project/" + "0"}>{Data[0].name}</Link></h2>
+                        <img src={Data[0].image} height="100" width="100" alt="image of project" />
+                        <h3>Description:</h3><p>{Data[0].description}</p>
                         <StarBar  />
                     </div>
                     <div className="projects">
-                        <h2>Bent Creek Ceramics Website</h2>
-                        <img src="/placeholder4.png" height="100" width="100" alt="image of project"></img>
-                        <h3>Description:</h3><p> a website for Bent Creek Ceramics.</p>
-                        <button onClick={() =>this.handleClick("https://github.com/lucaschescheir/Week-one-Project")}>Check it out on GitHub!</button>
+                        <Link to={"/project/" +"1"}><h2>{Data[1].name}</h2></Link>
+                        <img src={Data[1].image} height="100" width="100" alt="image of project"></img>
+                        <h3>Description:</h3><p>{Data[1].description}</p>
                         <StarBar  />
                     </div>
                     <div className="projects">
-                        <h2> Gabble App</h2>
-                        <img src="/placeholder4.png" height="100" width="100" alt="image of project"></img>
-                        <h3>Description:</h3><p> a group messaging app with a sign in page.</p>
-                        <button onClick={() =>this.handleClick("https://github.com/lucaschescheir/Gabble_App")}>Check it out on GitHub!</button>
+                        <Link to={"/project/" + "2"}><h2>{Data[2].name}</h2></Link>
+                        <img src={Data[2].image} height="100" width="100" alt="image of project"></img>
+                        <h3>Description:</h3><p>{Data[2].description}</p>
                         <StarBar  />
                     </div>
                     <div className="projects">
-                        <h2> Snippit App</h2>
-                        <img src="/placeholder4.png" height="100" width="100" alt="image of project"></img>
-                        <h3>Description:</h3><p> a app for storing and searching your collection of snippits!</p>
-                        <button onClick={() =>this.handleClick("https://github.com/lucaschescheir/Snippet_Daily")}>Check it out on GitHub!</button>
+                        <Link to={"/project/" + "3"}><h2>{Data[3].name}</h2></Link>
+                        <img src={Data[3].image} height="100" width="100" alt="image of project"></img>
+                        <h3>Description:</h3><p>{Data[3].description}</p>
                         <StarBar  />
                     </div>
                 </div>
             </section>
         )
     }
-}
+    }
 export default Projects
